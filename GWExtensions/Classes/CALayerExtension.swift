@@ -11,7 +11,7 @@ import UIKit
 public extension CALayer {
     
     // View, Component 에 Border 생성 (방향, 색상, 굵기)
-    public func addBorder(_ arr_edge: [UIRectEdge], color: UIColor, thickness: CGFloat) {
+    public func setBorder(_ arr_edge: [UIRectEdge], color: UIColor, thickness: CGFloat) {
         
         for edge in arr_edge {
             let border = CALayer()
@@ -36,7 +36,7 @@ public extension CALayer {
         }
     }
     
-    public func border_width_color(_ width: CGFloat, color: UIColor) {
+    public func setBorderColor(_ width: CGFloat, color: UIColor) {
         self.borderWidth = width
         self.borderColor = color.cgColor
     }
