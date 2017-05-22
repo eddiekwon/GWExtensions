@@ -11,6 +11,9 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+XCode 8.0+
+Swift 3.0+
+
 ## Installation
 
 GWExtensions is available through [CocoaPods](http://cocoapods.org). To install
@@ -22,7 +25,7 @@ pod "GWExtensions"
 
 ## Author
 
-Ryu, oper0960@peopleroad.net
+Ryu, oper0960@naver.com
 
 ## License
 
