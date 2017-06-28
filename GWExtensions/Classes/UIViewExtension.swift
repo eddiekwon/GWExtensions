@@ -8,8 +8,8 @@
 
 import UIKit
 
-public extension UIView
-{
+public extension UIView {
+    
     public class func copyView() -> AnyObject {
         return NSKeyedUnarchiver.unarchiveObject(with: NSKeyedArchiver.archivedData(withRootObject: self))! as AnyObject
     }
@@ -36,7 +36,7 @@ public extension UIView
     }
     
     // 현재 뷰에 대한 화면 캡쳐
-    func capture(_ shadow: Bool = false) -> UIImage {
+    public func capture(_ shadow: Bool = false) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, 0)
         self.layer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
@@ -54,10 +54,10 @@ public extension UIView
     }
 }
 
-extension UIWebView {
+public extension UIWebView {
     
     // 현재 웹뷰의 화면을 캡쳐
-    func capture() -> UIImage { UIGraphicsBeginImageContextWithOptions(scrollView.contentSize, scrollView.isOpaque, 0)
+    public func capture() -> UIImage { UIGraphicsBeginImageContextWithOptions(scrollView.contentSize, scrollView.isOpaque, 0)
         let currentContentOffset = scrollView.contentOffset
         let currentFrame = scrollView.frame
         scrollView.contentOffset = CGPoint.zero
@@ -71,25 +71,25 @@ extension UIWebView {
     }
 }
 
-extension UITableView {
+public extension UITableView {
     
-    func setAsSelectAll(section: Int) {
+    public func setAsSelectAll(section: Int) {
         for row in 0 ..< self.numberOfRows(inSection: section) {
             self.selectRow(at: IndexPath(row: row, section: section), animated: false, scrollPosition: .none)
         }
     }
     
-    func setAsDeselectAll(section: Int) {
+    public func setAsDeselectAll(section: Int) {
         for row in 0 ..< self.numberOfRows(inSection: section) {
             self.deselectRow(at: IndexPath(row: row, section: section), animated: false)
         }
     }
 }
 
-extension CGFloat {
+public extension CGFloat {
     
     // Auto Width ( Standard = 4.7" )
-    func setAutoWidth(_ width: Int) -> CGFloat {
+    public func setAutoWidth(_ width: Int) -> CGFloat {
         switch UIScreen.main.bounds.width {
         case 320:   // 3.5", 4"
             return CGFloat(Float((width/375) * 320))
@@ -103,7 +103,7 @@ extension CGFloat {
     }
     
     // Auto Height ( Standard = 4.7" )
-    func setAutoHeight(_ height: Int) -> CGFloat {
+    public func setAutoHeight(_ height: Int) -> CGFloat {
         switch UIScreen.main.bounds.width {
         case 480:   // 3.5"
             return CGFloat(Float((height/667) * 480))

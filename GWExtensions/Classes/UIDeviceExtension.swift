@@ -46,16 +46,16 @@ public extension UIDevice {
     }
 }
 
-extension UserDefaults {
+public extension UserDefaults {
     
     // UserDefaults Key & Value 저장
-    func set(_ key: String, value: Any) {
+    public func set(_ key: String, value: Any) {
         UserDefaults.standard.set(value, forKey: key)
         UserDefaults.standard.synchronize()
     }
     
     // UserDefaults Key & Value 검색
-    func get<T>(_ key: String) -> T? {
+    public func get<T>(_ key: String) -> T? {
         return UserDefaults.standard.object(forKey: key) as? T
     }
 }
