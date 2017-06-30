@@ -10,32 +10,32 @@ import UIKit
 
 public extension String {
     
-    // 문자열 공백 삭제
+    // String Trim
     public var stringTrim: String{
        return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
     
-    // 문자열 길이
+    // String length
     public var length: Int {
         return self.characters.count
     }
     
-    // 문자열 반전
+    // String reversed
     public func reversed() -> String {
         return self.characters.reversed().map { String($0) }.joined(separator: "")
     }
     
-    // 로컬라이징 문자열
+    // String localized
     public var localized: String {
         return NSLocalizedString(self, comment: "")
     }
     
-    // 로컬라이징 문자열 (코멘트)
+    // String localized with comment
     public func localizedWithComment(comment: String) -> String {
         return NSLocalizedString(self, comment:comment)
     }
     
-    // 이메일 정규식
+    // E-mail address validation
     public func validateEmail() -> Bool {
         let emailRegEx = "^.+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*$"
         
@@ -43,7 +43,7 @@ public extension String {
         return predicate.evaluate(with: self)
     }
     
-    // 비밀번호 정규식
+    // Password validation
     public func validatePassword() -> Bool {
         let passwordRegEx = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,16}$"
         
@@ -51,7 +51,7 @@ public extension String {
         return predicate.evaluate(with: self)
     }
     
-    // 문자열 분해
+    // String split return array
     public func arrayBySplit(splitter: String? = nil) -> [String] {
         if let s = splitter {
             return self.components(separatedBy: s)

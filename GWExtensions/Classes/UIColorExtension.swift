@@ -9,12 +9,13 @@
 import UIKit
 
 public extension UIColor {
-    // View 색상을 한가지로 통일
+    
+    // Unify the color of the view
     public func setOneColor(_ colorRGB: CGFloat, alpha: CGFloat) -> UIColor {
         return UIColor(red: colorRGB/255.0, green: colorRGB/255.0, blue: colorRGB/255.0, alpha: alpha)
     }
     
-    // Color Hex값으로 설정
+    // Change view color to hex value
     public convenience init?(hexString: String, alpha: CGFloat) {
         let r, g, b, a: CGFloat
         

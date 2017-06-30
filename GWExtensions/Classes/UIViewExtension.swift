@@ -22,20 +22,20 @@ public extension UIView {
         return self.frame.origin.x + self.frame.size.width
     }
     
-    // 원형 프레임 잡아주기
+    // Set imageview square
     public func setSquareImage() {
         self.clipsToBounds = true
         self.layer.cornerRadius = self.frame.size.width / 2
     }
     
-    // 모든 서브뷰 삭제
+    // All subview remove
     public func removeAllSubviews() {
         for subview in self.subviews {
             subview.removeFromSuperview()
         }
     }
     
-    // 현재 뷰에 대한 화면 캡쳐
+    // Screen capture of the view
     public func capture(_ shadow: Bool = false) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, 0)
         self.layer.render(in: UIGraphicsGetCurrentContext()!)
@@ -56,7 +56,7 @@ public extension UIView {
 
 public extension UIWebView {
     
-    // 현재 웹뷰의 화면을 캡쳐
+    // Screen capture of the Webview
     public func capture() -> UIImage { UIGraphicsBeginImageContextWithOptions(scrollView.contentSize, scrollView.isOpaque, 0)
         let currentContentOffset = scrollView.contentOffset
         let currentFrame = scrollView.frame
@@ -73,48 +73,17 @@ public extension UIWebView {
 
 public extension UITableView {
     
+    // TableviewCell all select
     public func setAsSelectAll(section: Int) {
         for row in 0 ..< self.numberOfRows(inSection: section) {
             self.selectRow(at: IndexPath(row: row, section: section), animated: false, scrollPosition: .none)
         }
     }
     
+    // TableviewCell all deselect
     public func setAsDeselectAll(section: Int) {
         for row in 0 ..< self.numberOfRows(inSection: section) {
             self.deselectRow(at: IndexPath(row: row, section: section), animated: false)
-        }
-    }
-}
-
-public extension CGFloat {
-    
-    // Auto Width ( Standard = 4.7" )
-    public func setAutoWidth(_ width: Int) -> CGFloat {
-        switch UIScreen.main.bounds.width {
-        case 320:   // 3.5", 4"
-            return CGFloat(Float((width/375) * 320))
-        case 375:   // 4.7"
-            return CGFloat(Float((width/375) * 375))
-        case 414:   // 5.5"
-            return CGFloat(Float((width/375) * 414))
-        default:
-            return 0
-        }
-    }
-    
-    // Auto Height ( Standard = 4.7" )
-    public func setAutoHeight(_ height: Int) -> CGFloat {
-        switch UIScreen.main.bounds.width {
-        case 480:   // 3.5"
-            return CGFloat(Float((height/667) * 480))
-        case 568:   // 4"
-            return CGFloat(Float((height/667) * 568))
-        case 667:   // 4.7"
-            return CGFloat(Float((height/667) * 667))
-        case 736:   // 5.5"
-            return CGFloat(Float((height/667) * 736))
-        default:
-            return 0
         }
     }
 }

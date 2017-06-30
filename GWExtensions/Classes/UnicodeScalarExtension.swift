@@ -10,8 +10,8 @@ import UIKit
 
 public extension UnicodeScalar {
     
-    // 이모지인지
-    var isEmoji: Bool {
+    // is Emoji
+    public var isEmoji: Bool {
         switch value {
         case 0x3030, 0x00AE, 0x00A9,
              0x1D000 ... 0x1F77F,
