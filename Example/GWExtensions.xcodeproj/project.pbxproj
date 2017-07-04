@@ -28,10 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BF9900660078F6607D6E0A9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		0BF9900660078F6607D6E0A9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3A424AD9E47824CDB4677021 /* Pods-GWExtensions_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GWExtensions_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GWExtensions_Example/Pods-GWExtensions_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		579E25D4BFAE8C726DC8FAE9 /* Pods_GWExtensions_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GWExtensions_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C32A5386E14E8F0FF1326E9 /* GWExtensions.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = GWExtensions.podspec; path = ../GWExtensions.podspec; sourceTree = "<group>"; };
+		5C32A5386E14E8F0FF1326E9 /* GWExtensions.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GWExtensions.podspec; path = ../GWExtensions.podspec; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* GWExtensions_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GWExtensions_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		837FD82D160DFE3D40C3C200 /* Pods-GWExtensions_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GWExtensions_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GWExtensions_Tests/Pods-GWExtensions_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B6545ECE618F16B7C5E100A9 /* Pods-GWExtensions_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GWExtensions_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GWExtensions_Tests/Pods-GWExtensions_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D1F6F53658A3451A675A1042 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D1F6F53658A3451A675A1042 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D679522E261C9199D6479DD2 /* Pods-GWExtensions_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GWExtensions_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-GWExtensions_Example/Pods-GWExtensions_Example.release.xcconfig"; sourceTree = "<group>"; };
 		ED0575FAF737A0F58A139A41 /* Pods_GWExtensions_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GWExtensions_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -408,6 +408,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -455,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
