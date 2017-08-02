@@ -19,8 +19,7 @@
 		42ADBB9D1F05E44F00431CEE /* AttributeStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADBB9C1F05E44F00431CEE /* AttributeStringExtension.swift */; };
 		42ADBB9F1F05E4A700431CEE /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADBB9E1F05E4A700431CEE /* UserDefaultsExtension.swift */; };
 		42ADBBA11F05E4E400431CEE /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADBBA01F05E4E400431CEE /* CGFloatExtension.swift */; };
-		42ADBBA31F0B27E800431CEE /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADBBA21F0B27E800431CEE /* UITextViewExtension.swift */; };
-		42ADBBA51F0B288F00431CEE /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADBBA41F0B288F00431CEE /* UITextFieldExtension.swift */; };
+		42C40BD11F25B8D5003A06A2 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C40BD01F25B8D5003A06A2 /* ArrayExtension.swift */; };
 		5134C03078F268072B92B18B216BA1DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		6095ED0CA190C7AEF849F7E9231B9147 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		7B14CE1DBA641AF5C10C02C7148286B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -59,10 +58,7 @@
 		42ADBB9C1F05E44F00431CEE /* AttributeStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeStringExtension.swift; sourceTree = "<group>"; };
 		42ADBB9E1F05E4A700431CEE /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		42ADBBA01F05E4E400431CEE /* CGFloatExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
-		42ADBBA21F0B27E800431CEE /* UITextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
-		42ADBBA41F0B288F00431CEE /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
-		42ADBBA81F0B28F500431CEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		42ADBBAC1F0B29C200431CEE /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		42C40BD01F25B8D5003A06A2 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		4B68322BC421E429D0D390D91569B9DD /* Pods-GWExtensions_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GWExtensions_Example-dummy.m"; sourceTree = "<group>"; };
 		54BFE5F3B5F173AD3F1AB3EDA5A7C09C /* Pods-GWExtensions_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GWExtensions_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		55AFC3C63F752E69EDF61B406E107824 /* Pods-GWExtensions_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GWExtensions_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -119,29 +115,19 @@
 		0DCF3F2B946135985721FCD4A66131F8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				42ADBBA61F0B28B200431CEE /* Localized */,
+				42ADBB9E1F05E4A700431CEE /* UserDefaultsExtension.swift */,
 				42ADBB9C1F05E44F00431CEE /* AttributeStringExtension.swift */,
-				427DD7DA1EA5BCF90099CDC3 /* CALayerExtension.swift */,
 				42ADBBA01F05E4E400431CEE /* CGFloatExtension.swift */,
 				427DD7E41EA5E81A0099CDC3 /* StringExtension.swift */,
 				427DD7DC1EA5C15E0099CDC3 /* UIColorExtension.swift */,
 				427DD7E21EA5DDF00099CDC3 /* UIDeviceExtension.swift */,
 				427DD7D81EA5BC9D0099CDC3 /* UIFontExtension.swift */,
 				427DD7DE1EA5C34E0099CDC3 /* UIViewExtension.swift */,
+				427DD7DA1EA5BCF90099CDC3 /* CALayerExtension.swift */,
 				427DD7E81EA60EB20099CDC3 /* UnicodeScalarExtension.swift */,
-				42ADBB9E1F05E4A700431CEE /* UserDefaultsExtension.swift */,
-				42ADBBA21F0B27E800431CEE /* UITextViewExtension.swift */,
-				42ADBBA41F0B288F00431CEE /* UITextFieldExtension.swift */,
+				42C40BD01F25B8D5003A06A2 /* ArrayExtension.swift */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		42ADBBA61F0B28B200431CEE /* Localized */ = {
-			isa = PBXGroup;
-			children = (
-				42ADBBA91F0B28F500431CEE /* Localizable.strings */,
-			);
-			name = Localized;
 			sourceTree = "<group>";
 		};
 		70D388BB46BB581A413A3C86A96467AB /* Pods-GWExtensions_Tests */ = {
@@ -390,11 +376,10 @@
 				42ADBB9F1F05E4A700431CEE /* UserDefaultsExtension.swift in Sources */,
 				427DD7DF1EA5C34E0099CDC3 /* UIViewExtension.swift in Sources */,
 				427DD7E91EA60EB20099CDC3 /* UnicodeScalarExtension.swift in Sources */,
-				42ADBBA31F0B27E800431CEE /* UITextViewExtension.swift in Sources */,
+				42C40BD11F25B8D5003A06A2 /* ArrayExtension.swift in Sources */,
 				427DD7E51EA5E81A0099CDC3 /* StringExtension.swift in Sources */,
 				42ADBB9D1F05E44F00431CEE /* AttributeStringExtension.swift in Sources */,
 				427DD7DB1EA5BCF90099CDC3 /* CALayerExtension.swift in Sources */,
-				42ADBBA51F0B288F00431CEE /* UITextFieldExtension.swift in Sources */,
 				427DD7D91EA5BC9D0099CDC3 /* UIFontExtension.swift in Sources */,
 				427DD7E31EA5DDF00099CDC3 /* UIDeviceExtension.swift in Sources */,
 				1A75E6CDC0794E6762EBF0B3E40B5738 /* GWExtensions-dummy.m in Sources */,
@@ -429,19 +414,6 @@
 			targetProxy = 58EDD3C1399E4D680D5FD6251BC5ECDD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		42ADBBA91F0B28F500431CEE /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				42ADBBA81F0B28F500431CEE /* en */,
-				42ADBBAC1F0B29C200431CEE /* ko */,
-			);
-			name = Localizable.strings;
-			path = Localized;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {

@@ -6,6 +6,10 @@
 //
 //
 
+let defaults = UserDefaults.standard
+let screenWidth = UIScreen.main.bounds.width
+let screenHeight = UIScreen.main.bounds.height
+
 import UIKit
 
 public extension UIView {
@@ -52,6 +56,15 @@ public extension UIView {
         // return image 면 UIImage, return snapshotImageView 면 UIImageView
         return image!
     }
+    
+    // Only at the corner want radius
+    public func selectCornerRadius(direction : UIRectCorner, cornerSize: CGSize) {
+        let maskPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: direction, cornerRadii: cornerSize)
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = self.bounds;
+        maskLayer.path = maskPath.cgPath;
+        self.layer.mask = maskLayer
+    }
 }
 
 public extension UIWebView {
@@ -87,3 +100,39 @@ public extension UITableView {
         }
     }
 }
+
+public extension UILabel {
+    
+    public func getLabelHeight(text: String, width: CGFloat, font: UIFont) -> CGFloat {
+        let lbl = UILabel(frame: .zero)
+        lbl.frame.size.width = width
+        lbl.font = font
+        lbl.numberOfLines = 0
+        lbl.text = text
+        lbl.sizeToFit()
+        
+        return lbl.frame.size.height
+    }
+}
+
+public extension UITextField {
+    
+    public func getTextViewHeight(text: String, width: CGFloat, font: UIFont) -> CGFloat {
+        let tv = UITextView(frame: .zero)
+        tv.frame.size.width = width
+        tv.font = font
+        tv.text = text
+        tv.sizeToFit()
+        
+        return tv.frame.size.height
+    }
+}
+
+
+
+
+
+
+
+
+

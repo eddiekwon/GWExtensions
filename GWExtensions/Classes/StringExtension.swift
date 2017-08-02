@@ -15,7 +15,7 @@ public extension String {
        return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
     
-    // String length
+    // Return String chracters count
     public var length: Int {
         return self.characters.count
     }
