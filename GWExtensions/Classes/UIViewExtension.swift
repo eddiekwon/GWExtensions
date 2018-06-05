@@ -117,6 +117,12 @@ public extension UILabel {
 
 public extension UITextField {
     
+    enum PaddingType {
+        case all
+        case left
+        case right
+    }
+    
     public func getTextViewHeight(text: String, width: CGFloat, font: UIFont) -> CGFloat {
         let tv = UITextView(frame: .zero)
         tv.frame.size.width = width
@@ -125,6 +131,23 @@ public extension UITextField {
         tv.sizeToFit()
         
         return tv.frame.size.height
+    }
+    
+    func setPadding(_ direction: PaddingType, width: CGFloat) {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: self.frame.height))
+        switch direction {
+        case .all:
+            self.leftView = paddingView
+            self.rightView = paddingView
+            self.leftViewMode = .always
+            self.rightViewMode = .always
+        case .left:
+            self.leftView = paddingView
+            self.leftViewMode = .always
+        case .right:
+            self.rightView = paddingView
+            self.rightViewMode = .always
+        }
     }
 }
 

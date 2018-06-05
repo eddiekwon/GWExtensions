@@ -12,7 +12,7 @@ public extension NSMutableAttributedString {
     
     // AttributeString simplification
     public func setAttribute(font: UIFont, color: UIColor, start: Int, length: Int) {
-        self.addAttributes([NSFontAttributeName: font, NSForegroundColorAttributeName: color],
+        self.addAttributes([NSAttributedStringKey.font: font, NSAttributedStringKey.foregroundColor: color],
                            range: NSMakeRange(start, length))
     }
 }

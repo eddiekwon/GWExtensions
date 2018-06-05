@@ -17,12 +17,12 @@ public extension String {
     
     // Return String chracters count
     public var length: Int {
-        return self.characters.count
+        return self.count
     }
     
     // String reversed
     public func reversed() -> String {
-        return self.characters.reversed().map { String($0) }.joined(separator: "")
+        return self.reversed().map { String($0) }.joined(separator: "")
     }
     
     // String localized
