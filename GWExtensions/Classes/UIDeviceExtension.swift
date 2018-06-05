@@ -12,7 +12,7 @@ public extension UIDevice {
     
     // Get device UUID
     public var deviceUUID: String? {
-        return UIDevice.current.identifierForVendor?.uuidString
+        return UIDevice.current.identifierForVendor?.uuidString ?? "Not found UUID"
     }
     
     // Get device system name

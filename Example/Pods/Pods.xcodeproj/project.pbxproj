@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		08BBF5FEF543343228D26E40080B913F /* Pods-GWExtensions_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B68322BC421E429D0D390D91569B9DD /* Pods-GWExtensions_Example-dummy.m */; };
 		1A75E6CDC0794E6762EBF0B3E40B5738 /* GWExtensions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA3033CE450CB2C966353CEA13AE6C /* GWExtensions-dummy.m */; };
+		31473A5320C66C9F00B639AC /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31473A5220C66C9F00B639AC /* UINavigationControllerExtension.swift */; };
 		427DD7D91EA5BC9D0099CDC3 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427DD7D81EA5BC9D0099CDC3 /* UIFontExtension.swift */; };
 		427DD7DB1EA5BCF90099CDC3 /* CALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427DD7DA1EA5BCF90099CDC3 /* CALayerExtension.swift */; };
 		427DD7DD1EA5C15E0099CDC3 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427DD7DC1EA5C15E0099CDC3 /* UIColorExtension.swift */; };
@@ -46,6 +47,7 @@
 		101C33906C402E08427B0E6B6D23415D /* GWExtensions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GWExtensions-prefix.pch"; sourceTree = "<group>"; };
 		1A37E0E823750EF6FEAD4070A57F9754 /* Pods_GWExtensions_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GWExtensions_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCA3033CE450CB2C966353CEA13AE6C /* GWExtensions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GWExtensions-dummy.m"; sourceTree = "<group>"; };
+		31473A5220C66C9F00B639AC /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		3A35F26A207A8BBB14C5E917C57676F6 /* GWExtensions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GWExtensions-umbrella.h"; sourceTree = "<group>"; };
 		3BAF14E99CFCA6C8B644351849B49332 /* Pods-GWExtensions_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GWExtensions_Example-resources.sh"; sourceTree = "<group>"; };
 		427DD7D81EA5BC9D0099CDC3 /* UIFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				427DD7DA1EA5BCF90099CDC3 /* CALayerExtension.swift */,
 				427DD7E81EA60EB20099CDC3 /* UnicodeScalarExtension.swift */,
 				42C40BD01F25B8D5003A06A2 /* ArrayExtension.swift */,
+				31473A5220C66C9F00B639AC /* UINavigationControllerExtension.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			files = (
 				42ADBB9F1F05E4A700431CEE /* UserDefaultsExtension.swift in Sources */,
 				427DD7DF1EA5C34E0099CDC3 /* UIViewExtension.swift in Sources */,
+				31473A5320C66C9F00B639AC /* UINavigationControllerExtension.swift in Sources */,
 				427DD7E91EA60EB20099CDC3 /* UnicodeScalarExtension.swift in Sources */,
 				42C40BD11F25B8D5003A06A2 /* ArrayExtension.swift in Sources */,
 				427DD7E51EA5E81A0099CDC3 /* StringExtension.swift in Sources */,

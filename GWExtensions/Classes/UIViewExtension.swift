@@ -18,11 +18,11 @@ public extension UIView {
         return NSKeyedUnarchiver.unarchiveObject(with: NSKeyedArchiver.archivedData(withRootObject: self))! as AnyObject
     }
     
-    public func nextViewOriginY() -> CGFloat {
+    public func nextY() -> CGFloat {
         return self.frame.origin.y + self.frame.size.height
     }
     
-    public func nextViewOriginX() -> CGFloat {
+    public func nextX() -> CGFloat {
         return self.frame.origin.x + self.frame.size.width
     }
     
@@ -103,6 +103,7 @@ public extension UITableView {
 
 public extension UILabel {
     
+    // get UILabel Height
     public func getLabelHeight(text: String, width: CGFloat, font: UIFont) -> CGFloat {
         let lbl = UILabel(frame: .zero)
         lbl.frame.size.width = width
@@ -123,6 +124,7 @@ public extension UITextField {
         case right
     }
     
+    // get UITextView Height
     public func getTextViewHeight(text: String, width: CGFloat, font: UIFont) -> CGFloat {
         let tv = UITextView(frame: .zero)
         tv.frame.size.width = width
@@ -133,6 +135,7 @@ public extension UITextField {
         return tv.frame.size.height
     }
     
+    // UITextField add Padding
     func setPadding(_ direction: PaddingType, width: CGFloat) {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: self.frame.height))
         switch direction {
@@ -147,6 +150,23 @@ public extension UITextField {
         case .right:
             self.rightView = paddingView
             self.rightViewMode = .always
+        }
+    }
+}
+
+public extension UIActivityIndicatorView {
+    
+    public func start(){
+        DispatchQueue.main.async {
+            self.isHidden = false
+            self.startAnimating()
+        }
+    }
+    
+    public func stop(){
+        DispatchQueue.main.async {
+            self.isHidden = true
+            self.stopAnimating()
         }
     }
 }

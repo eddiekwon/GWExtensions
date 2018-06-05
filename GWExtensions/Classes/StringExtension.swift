@@ -60,3 +60,22 @@ public extension String {
         }
     }
 }
+
+public extension Optional {
+    
+    // Check NotEmpty
+    public var isNotEmpty: Bool {
+        guard let str = self as? String else {
+            return false
+        }
+        return !str.isEmpty
+    }
+    
+    // Check NotEmpty return String
+    public var isNotEmptyString: String {
+        guard let str = self as? String else {
+            return ""
+        }
+        return str
+    }
+}
